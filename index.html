@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="style.css">
+
+<div class="m-10 rounded-lg bg-white px-6 py-8 shadow-xl ring-1 ring-slate-900/5 dark:bg-black">
+  <h3 class="text-base font-medium tracking-tight text-slate-900 dark:text-white">Writes Upside-Down</h3>
+  <p class="mt-2 text-sm text-slate-500 dark:text-blue-100">The Zero Gravity Pen can be used to write in any
+    orientation, including upside-down. It even works in outer space.</p>
+
+  <button id="toggleDark" class="px-4 py-2 text-sm font-medium mt-8 text-blue-900 bg-blue-100 rounded-md"
+    onclick="document.body.classList.toggle('dark')">Toggle Dark Mode</button>
+</div>
+
+<div class="flex-center">
+  <h3>No need for specific classes</h3>
+  <p>Same here</p>
+</div>
+
+<!-- Accent - change default accent elements' styles -->
+<div class="my-4 flex flex-col text-white ml-2">
+  <label><input type="checkbox" checked>Browser default</label>
+  <label><input type="checkbox" class="accent-pink-500" checked>Customn</label>
+</div>
+
+<!-- Fluid Textx -->
+<!-- <p class="sm:text-7xl text-5xl">Default</p> -->
+<p class="text-[min(10vw, 70px)]">Fluid</p>
+
+<!-- File -->
+ <!-- Selecting the type should autofill all classes -->
+<label><input type="file"></label>
+
+<!-- Highlight -->
+<div class="selection:bg-green-400 selection:text-white">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam molestiae deserunt unde sint molestias placeat
+    quia, est reprehenderit voluptate facilis omnis nihil, laborum praesentium! Modi.</p>
+</div>
+
+<!-- Less JS -->
+ <!-- Accordion, Caret, Gradiants, Animations -->
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleDark = document.getElementById('toggleDark')
+    toggleDark.addEventListener('click', function () {
+      if (document.documentElement.classList.includes('dark')) {
+        document.documentElement.classList.remove('dark')
+      }
+      else {
+        document.documentElement.classList.add('dark')
+      }
+      alert("click!")
+    });
+  });
+</script>
